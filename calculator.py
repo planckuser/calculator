@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Add logo and title
-st.image('planck_logo.png', width=100)
+st.image('planck.jpeg', width=200)
 st.title('$PLN Earning Calculator')
 
 # Conversion rates
@@ -35,7 +35,4 @@ gpus = st.number_input('Enter number of GPUs', min_value=0, step=1)
 total_pln = ram * ram_rate + vram * vram_rate + vcpus * vcpu_rate + cpus * cpu_rate + gpus * gpu_rate
 
 # Display result
-st.write(f'Total PLN: {total_pln}')
-
-if __name__ == '__main__':
-    st.run(port=port, address=address)
+st.write(f'Total $PLN: {total_pln}')
